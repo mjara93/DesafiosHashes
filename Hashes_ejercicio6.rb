@@ -21,7 +21,8 @@ def peliculas_por_genero(hash)
     end
     genres
 end
-peliculas_por_genero(movies)
+
+print "#{peliculas_por_genero(Peliculas::MOVIES)}\n"
 
 def contar_peliculas(hash)
   peliculas = peliculas_por_genero(hash)
@@ -36,7 +37,7 @@ def contar_peliculas(hash)
   peliculas
 end
 
-contar_peliculas(movies)
+print "#{contar_peliculas(Peliculas::MOVIES)}\n"
 
 def filtro_year(hash, start, finish)
   a = 0
@@ -51,7 +52,7 @@ def filtro_year(hash, start, finish)
   filtradas
 end
 
-filtro_year(movies, 1999, 2005)
+print "#{filtro_year(Peliculas::MOVIES, 1999, 2005)}\n"
 
 def rating(hash)
   peliculas = {}
@@ -80,4 +81,4 @@ def rating(hash)
   peliculas
 end
 
-rating(movies)
+print "#{rating(Peliculas::MOVIES)}\n"
